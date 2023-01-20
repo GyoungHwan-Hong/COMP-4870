@@ -1,0 +1,17 @@
+@model List<MyFile>
+
+@{
+    ViewData["Title"] = "File Index";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+   
+
+    @foreach (var item in Model)
+    {
+        <li>
+            <a asp-controller="File" asp-action="content" asp-route-id="@item.Id">@item.filename</a>
+        </li>
+    }
+</div>

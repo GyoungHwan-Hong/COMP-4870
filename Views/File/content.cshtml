@@ -1,0 +1,9 @@
+@model MyFile
+@{
+    ViewData["Title"] = "File Content";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Model.filename</h1>
+    <p>@Model.content</p>
+</div>
